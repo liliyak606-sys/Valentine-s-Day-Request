@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { AlertTriangle } from 'lucide-react';
 
@@ -17,9 +18,9 @@ const AngryModal: React.FC<AngryModalProps> = ({ onClose, count }) => {
         </div>
 
         <div className="relative z-10 flex flex-col items-center text-center space-y-4">
-          <div className="w-48 h-40 rounded-lg overflow-hidden border-4 border-red-600 shadow-[0_0_20px_rgba(220,38,38,0.7)]">
+          <div className="w-48 h-48 rounded-lg overflow-hidden border-4 border-red-600 shadow-[0_0_20px_rgba(220,38,38,0.7)]">
             <img 
-                src="https://media.tenor.com/D-J-gN--pZAAAAAi/bear-cute.gif" 
+                src="https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/refs/heads/main/Img/c970804aef04c3860672f2827c3b9bd8.jpg" 
                 alt="Серьезное предупреждение" 
                 className="w-full h-full object-cover"
             />

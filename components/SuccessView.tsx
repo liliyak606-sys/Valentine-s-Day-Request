@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Heart, Sparkles, Gift } from 'lucide-react';
 
@@ -45,7 +46,7 @@ const SuccessView: React.FC = () => {
         <div className="relative">
           <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center bg-white/40 backdrop-blur-sm rounded-3xl shadow-2xl border-4 border-white transform rotate-3 overflow-hidden">
               <img 
-                src="https://media.tenor.com/f2A1EDp-fl0AAAAi/love.gif" 
+                src="https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/refs/heads/main/Img/bdb59e68112053510d7f804cb6893609.jpg" 
                 alt="Ура!" 
                 className="w-full h-full object-cover"
               />

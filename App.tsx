@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Heart, Smile } from 'lucide-react';
 import SuccessView from './components/SuccessView';
@@ -127,8 +128,8 @@ const App: React.FC = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-rose-400 to-orange-300 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
               <div className="relative w-64 h-64 bg-white/50 rounded-3xl flex items-center justify-center border-4 border-white shadow-lg overflow-hidden">
                 <img 
-                  src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" 
-                  alt="Милые мишки целуются" 
+                  src="https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/refs/heads/main/Img/1ac312d5078633128bbaaa02c5d042ed.jpg" 
+                  alt="Валентинка" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow border border-rose-100">
@@ -141,7 +142,6 @@ const App: React.FC = () => {
               Ты будешь моей валентинкой?
             </h1>
 
-            {/* Мы убрали 'relative' у этого контейнера, чтобы 'absolute' кнопка 'Нет' позиционировалась относительно всей карточки (cardRef) */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full h-32">
               
               <button
