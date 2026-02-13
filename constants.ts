@@ -22,15 +22,7 @@ export const REJECTION_PHRASES: PhraseConfig[] = [
 export const ANGRY_MODAL_THRESHOLD = 8;
 export const STOP_RUNNING_THRESHOLD = 15;
 
-// The image provided by the user (I + You = Infinity hearts)
-export const CUTE_BEAR_IMG = "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop"; 
-// Note: In a real scenario I'd use the base64 from the image, but for this format 
-// I will use the provided base64 if possible or a high-quality placeholder that matches the vibe if the user's specific base64 is too long.
-// Actually, I'll use a placeholder for the "Angry" and "Success" views so they don't break.
-export const HAPPY_COUPLE_IMG = "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop";
-export const ANGRY_BEAR_IMG = "https://images.unsplash.com/photo-1537151608828-ea2b11739ee0?q=80&w=1000&auto=format&fit=crop";
-
-// Re-defining CUTE_BEAR_IMG with a placeholder that represents the user's hearts for the demo 
-// since I cannot generate a persistent base64 from a screenshot mid-turn without external tools.
-// However, I will use a high quality representative image URL.
-export const USER_HEARTS_IMG = "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop";
+export const CUTE_BEAR_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/main/img/8bb1c56084c8a24d9ee9f972556fae73.jpg"; 
+export const HAPPY_COUPLE_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/refs/heads/main/img/80066465df6d617a75c3b7b1e6e40034.jpg";
+export const ANGRY_MODAL_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/refs/heads/main/img/0fabbd6af8558c9c997ed612f4c56f48.jpg";
+export const USER_HEARTS_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/main/img/8bb1c56084c8a24d9ee9f972556fae73.jpg";

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AlertTriangle, Skull } from 'lucide-react';
-import { ANGRY_BEAR_IMG } from '../constants';
+import { ANGRY_MODAL_IMG } from '../constants';
 
 interface AngryModalProps {
   onClose: () => void;
@@ -27,9 +27,9 @@ const AngryModal: React.FC<AngryModalProps> = ({ onClose, count }) => {
           </h2>
 
           <img 
-            src={ANGRY_BEAR_IMG} 
-            alt="Angry bear" 
-            className="w-32 h-32 rounded-full border-4 border-red-600 grayscale contrast-125"
+            src={ANGRY_MODAL_IMG} 
+            alt="Пожалуйста, согласись" 
+            className="w-32 h-32 rounded-full border-4 border-red-600 object-cover"
           />
 
           <p className="text-white font-bold text-lg">

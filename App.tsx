@@ -84,16 +84,15 @@ const App: React.FC = () => {
             
             <div className="relative group w-full flex justify-center">
               <div className="absolute -inset-2 bg-gradient-to-r from-rose-400 to-orange-300 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop" 
-                alt="Я и Ты" 
-                className="relative w-64 h-64 rounded-3xl object-cover border-4 border-white shadow-lg bg-white"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = CUTE_BEAR_IMG;
-                }}
-              />
-              <div className="absolute -bottom-2 -right-2 bg-white p-2 rounded-full shadow border border-rose-100">
-                <Smile className="w-6 h-6 text-rose-500" />
+              <div className="relative w-64 h-64">
+                <img 
+                  src={CUTE_BEAR_IMG} 
+                  alt="Я и Ты" 
+                  className="w-full h-full rounded-3xl object-cover border-4 border-white shadow-lg bg-white"
+                />
+                <div className="absolute bottom-2 right-2 bg-white p-2 rounded-full shadow border border-rose-100">
+                  <Smile className="w-6 h-6 text-rose-500" />
+                </div>
               </div>
             </div>
 

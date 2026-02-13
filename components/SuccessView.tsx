@@ -6,7 +6,6 @@ const SuccessView: React.FC = () => {
 
   const handleDownloadGift = () => {
     // Эта функция создает и скачивает текстовый файл.
-    // Когда вы предоставите настоящий файл, я заменю эту логику.
     const giftContent = "Это твой подарок! Спасибо, что ты моя валентинка! ❤️";
     const blob = new Blob([giftContent], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
@@ -44,7 +43,7 @@ const SuccessView: React.FC = () => {
 
       <div className="flex gap-2 text-white/80">
         <Sparkles className="animate-spin-slow" />
-        <span>14.02.2024</span>
+        <span>14.02.2026</span>
         <Sparkles className="animate-spin-slow" />
       </div>
 
