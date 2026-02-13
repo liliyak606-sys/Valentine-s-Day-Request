@@ -22,7 +22,7 @@ export const REJECTION_PHRASES: PhraseConfig[] = [
 export const ANGRY_MODAL_THRESHOLD = 8;
 export const STOP_RUNNING_THRESHOLD = 15;
 
-export const CUTE_BEAR_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/main/img/8bb1c56084c8a24d9ee9f972556fae73.jpg"; 
+export const CUTE_BEAR_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/refs/heads/main/img/8bb1c56084c8a24d9ee9f972556fae73.jpg"; 
 export const HAPPY_COUPLE_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/refs/heads/main/img/80066465df6d617a75c3b7b1e6e40034.jpg";
 export const ANGRY_MODAL_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/refs/heads/main/img/0fabbd6af8558c9c997ed612f4c56f48.jpg";
-export const USER_HEARTS_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/main/img/8bb1c56084c8a24d9ee9f972556fae73.jpg";
+export const USER_HEARTS_IMG = "https://raw.githubusercontent.com/liliyak606-sys/Valentine-s-Day-Request/refs/heads/main/img/8bb1c56084c8a24d9ee9f972556fae73.jpg";
