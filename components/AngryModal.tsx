@@ -1,6 +1,5 @@
 import React from 'react';
 import { AlertTriangle, Skull } from 'lucide-react';
-import { ANGRY_MODAL_IMG } from '../constants';
 
 interface AngryModalProps {
   onClose: () => void;
@@ -9,7 +8,7 @@ interface AngryModalProps {
 
 const AngryModal: React.FC<AngryModalProps> = ({ onClose, count }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
       <div className="bg-red-950 border-4 border-red-600 rounded-lg p-6 max-w-md w-full shadow-2xl animate-shake relative overflow-hidden">
         {/* Scary background elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -25,12 +24,6 @@ const AngryModal: React.FC<AngryModalProps> = ({ onClose, count }) => {
           <h2 className="text-3xl font-black text-red-500 uppercase tracking-widest drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
             ПРЕДУПРЕЖДЕНИЕ!
           </h2>
-
-          <img 
-            src={ANGRY_MODAL_IMG} 
-            alt="Пожалуйста, согласись" 
-            className="w-32 h-32 rounded-full border-4 border-red-600 object-cover"
-          />
 
           <p className="text-white font-bold text-lg">
             Если ты нажмешь "НЕТ" еще раз... <br/>

@@ -7,7 +7,7 @@ interface FinalRejectionModalProps {
 
 const FinalRejectionModal: React.FC<FinalRejectionModalProps> = ({ onConfirm }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-lg animate-in fade-in duration-500">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-lg animate-fade-in">
       <div className="bg-slate-900 border-4 border-rose-500 rounded-xl p-8 max-w-lg w-full shadow-2xl shadow-rose-500/20 relative text-center flex flex-col items-center space-y-6">
         
         <div className="absolute -top-8 bg-slate-800 border-4 border-rose-500 p-4 rounded-full">

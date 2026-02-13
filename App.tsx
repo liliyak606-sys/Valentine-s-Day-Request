@@ -1,10 +1,56 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Heart, Smile } from 'lucide-react';
 import SuccessView from './components/SuccessView';
 import AngryModal from './components/AngryModal';
 import FinalRejectionModal from './components/FinalRejectionModal';
 import { GameState, Position } from './types';
-import { REJECTION_PHRASES, ANGRY_MODAL_THRESHOLD, CUTE_BEAR_IMG, STOP_RUNNING_THRESHOLD } from './constants';
+import { REJECTION_PHRASES, ANGRY_MODAL_THRESHOLD, STOP_RUNNING_THRESHOLD } from './constants';
+
+interface HeartStyle {
+  left: string;
+  animationDuration: string;
+  animationDelay: string;
+  fontSize: string;
+}
+
+const FloatingHearts: React.FC = () => {
+  const [hearts, setHearts] = useState<HeartStyle[]>([]);
+
+  useEffect(() => {
+    const heartCount = 25;
+    const newHearts: HeartStyle[] = Array.from({ length: heartCount }).map(() => ({
+      left: `${Math.random() * 100}vw`,
+      animationDuration: `${Math.random() * 5 + 7}s`, // 7-12 seconds
+      animationDelay: `${Math.random() * 5}s`,
+      fontSize: `${Math.random() * 20 + 12}px`, // 12px to 32px
+    }));
+    setHearts(newHearts);
+  }, []);
+
+  return (
+    <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+      {hearts.map((style, index) => (
+         <div 
+          key={index} 
+          className="absolute bottom-[-50px]" 
+          style={{ 
+            left: style.left,
+            animation: `float ${style.animationDuration} ${style.animationDelay} linear infinite` 
+          }}
+        >
+           <Heart 
+            className="text-rose-300 opacity-60" 
+            style={{ 
+              width: style.fontSize,
+              height: style.fontSize,
+            }}
+            fill="currentColor"
+          />
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const App: React.FC = () => {
   const [gameState, setGameState] = useState<GameState>(GameState.ASKING);
@@ -64,12 +110,7 @@ const App: React.FC = () => {
   return (
     <div className={`min-h-screen flex items-center justify-center overflow-hidden transition-colors duration-700 ${noCount >= 12 ? 'bg-slate-900' : 'bg-rose-200'}`}>
       
-      <div className="fixed inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-10 left-10 text-rose-300 animate-pulse"><Heart size={40} fill="currentColor" /></div>
-        <div className="absolute top-1/4 right-20 text-rose-400 animate-bounce"><Heart size={30} fill="currentColor" /></div>
-        <div className="absolute bottom-20 left-1/3 text-pink-300 animate-pulse delay-75"><Heart size={50} fill="currentColor" /></div>
-        <div className="absolute top-1/2 right-10 text-rose-300 animate-pulse delay-150"><Heart size={24} fill="currentColor" /></div>
-      </div>
+      <FloatingHearts />
 
       <div 
         className="w-full max-w-2xl min-h-[600px] flex flex-col items-center justify-center p-4"
@@ -84,19 +125,15 @@ const App: React.FC = () => {
             
             <div className="relative group w-full flex justify-center">
               <div className="absolute -inset-2 bg-gradient-to-r from-rose-400 to-orange-300 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-              <div className="relative w-64 h-64">
-                <img 
-                  src={CUTE_BEAR_IMG} 
-                  alt="Я и Ты" 
-                  className="w-full h-full rounded-3xl object-cover border-4 border-white shadow-lg bg-white"
-                />
-                <div className="absolute bottom-2 right-2 bg-white p-2 rounded-full shadow border border-rose-100">
+              <div className="relative w-64 h-64 bg-white/50 rounded-3xl flex items-center justify-center border-4 border-white shadow-lg">
+                <Heart className="w-48 h-48 text-rose-400 drop-shadow-lg" fill="currentColor" />
+                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow border border-rose-100">
                   <Smile className="w-6 h-6 text-rose-500" />
                 </div>
               </div>
             </div>
 
-            <h1 className="text-3xl font-black text-gray-800 leading-tight">
+            <h1 className="text-4xl font-black text-gray-800 leading-tight text-gradient">
               Ты будешь моей валентинкой? 🥺
             </h1>
 
@@ -108,7 +145,7 @@ const App: React.FC = () => {
                 style={{ transform: `scale(${1 + (noCount * 0.15)})` }}
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-200 flex items-center gap-2 z-20 origin-center active:scale-95"
               >
-                ДА! ❤️
+                ДА! <Heart size={20} fill="white" className="group-hover:animate-bounce"/>
               </button>
 
               <button
