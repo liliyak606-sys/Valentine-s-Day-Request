@@ -125,8 +125,12 @@ const App: React.FC = () => {
             
             <div className="relative group w-full flex justify-center">
               <div className="absolute -inset-2 bg-gradient-to-r from-rose-400 to-orange-300 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-              <div className="relative w-64 h-64 bg-white/50 rounded-3xl flex items-center justify-center border-4 border-white shadow-lg">
-                <Heart className="w-48 h-48 text-rose-400 drop-shadow-lg" fill="currentColor" />
+              <div className="relative w-64 h-64 bg-white/50 rounded-3xl flex items-center justify-center border-4 border-white shadow-lg overflow-hidden">
+                <img 
+                  src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" 
+                  alt="Милые мишки целуются" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow border border-rose-100">
                   <Smile className="w-6 h-6 text-rose-500" />
                 </div>
@@ -134,7 +138,7 @@ const App: React.FC = () => {
             </div>
 
             <h1 className="text-4xl font-black text-gray-800 leading-tight text-gradient">
-              Ты будешь моей валентинкой? 🥺
+              Ты будешь моей валентинкой?
             </h1>
 
             {/* Мы убрали 'relative' у этого контейнера, чтобы 'absolute' кнопка 'Нет' позиционировалась относительно всей карточки (cardRef) */}

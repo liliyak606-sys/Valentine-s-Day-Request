@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, Skull } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 interface AngryModalProps {
   onClose: () => void;
@@ -17,8 +17,12 @@ const AngryModal: React.FC<AngryModalProps> = ({ onClose, count }) => {
         </div>
 
         <div className="relative z-10 flex flex-col items-center text-center space-y-4">
-          <div className="bg-red-600 p-4 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.7)] animate-pulse">
-            <Skull className="w-12 h-12 text-white" />
+          <div className="w-48 h-40 rounded-lg overflow-hidden border-4 border-red-600 shadow-[0_0_20px_rgba(220,38,38,0.7)]">
+            <img 
+                src="https://media.tenor.com/D-J-gN--pZAAAAAi/bear-cute.gif" 
+                alt="Серьезное предупреждение" 
+                className="w-full h-full object-cover"
+            />
           </div>
 
           <h2 className="text-3xl font-black text-red-500 uppercase tracking-widest drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">

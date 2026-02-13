@@ -43,8 +43,12 @@ const SuccessView: React.FC = () => {
       <Confetti />
       <div className="flex flex-col items-center justify-center p-8 text-center animate-fade-in space-y-6">
         <div className="relative">
-          <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center bg-white/40 backdrop-blur-sm rounded-3xl shadow-2xl border-4 border-white transform rotate-3">
-              <Gift className="w-48 h-48 text-white drop-shadow-lg"/>
+          <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center bg-white/40 backdrop-blur-sm rounded-3xl shadow-2xl border-4 border-white transform rotate-3 overflow-hidden">
+              <img 
+                src="https://media.tenor.com/f2A1EDp-fl0AAAAi/love.gif" 
+                alt="Ура!" 
+                className="w-full h-full object-cover"
+              />
           </div>
           <div className="absolute -top-4 -right-4 bg-white p-3 rounded-full shadow-lg">
             <Heart className="w-8 h-8 text-rose-500 fill-rose-500 animate-bounce" />
