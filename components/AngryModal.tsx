@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AlertTriangle } from 'lucide-react';
 
 interface AngryModalProps {
@@ -8,6 +8,14 @@ interface AngryModalProps {
 }
 
 const AngryModal: React.FC<AngryModalProps> = ({ onClose, count }) => {
+  useEffect(() => {
+    // Активируем вибрацию при появлении окна, если это поддерживается устройством
+    if ('vibrate' in navigator) {
+      // Паттерн: Вибрация 300мс, пауза 100мс, вибрация 300мс, пауза 100мс, длинная вибрация 600мс
+      navigator.vibrate([300, 100, 300, 100, 600]);
+    }
+  }, []);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
       <div className="bg-red-950 border-4 border-red-600 rounded-lg p-6 max-w-md w-full shadow-2xl animate-shake relative overflow-hidden">

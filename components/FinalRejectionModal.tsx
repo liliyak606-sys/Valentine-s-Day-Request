@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import { HeartCrack, ShieldAlert } from 'lucide-react';
 
 interface FinalRejectionModalProps {
@@ -6,6 +7,13 @@ interface FinalRejectionModalProps {
 }
 
 const FinalRejectionModal: React.FC<FinalRejectionModalProps> = ({ onConfirm }) => {
+  useEffect(() => {
+    // Самая мощная вибрация для финального окна
+    if ('vibrate' in navigator) {
+      navigator.vibrate([500, 200, 500, 200, 800]);
+    }
+  }, []);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-lg animate-fade-in">
       <div className="bg-slate-900 border-4 border-rose-500 rounded-xl p-8 max-w-lg w-full shadow-2xl shadow-rose-500/20 relative text-center flex flex-col items-center space-y-6">
